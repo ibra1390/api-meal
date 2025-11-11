@@ -1,12 +1,12 @@
 import React from 'react';
-
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const LectoRecetas = () => {
 
     return(
     <div className='relative flex-flex-col items-cente justify-center'>
-        <header className='bg-red-700 w-screen h-20 text-center'> HEADER
-        </header>
+        <Header/>
         <div className="bg-[url('https://www.comfenalco.com.co/wp-content/uploads/2025/07/tamal.webp')] bg-center bg-cover bg-no-repeat w-screen h-[500px] flex flex-col items-center justify-center 
             relative">
             <div className="absolute inset-0 bg-black/15 flex items-center justify-center">
@@ -54,8 +54,7 @@ const LectoRecetas = () => {
             </div>
         </main>
         <div className='size-50 w-full bg-black text-white text-center'>VIDEO</div>
-        <div className='bg-red-700 w-screen h-20 text-center'> FOOTER
-        </div>
+        <Footer />
         <div className='fixed top-100 left-0 m-2'>
             <div className='size-10 rounded-full bg-red-600'></div>
             <div className='size-10 rounded-full bg-red-600'></div>
