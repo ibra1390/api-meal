@@ -22,7 +22,7 @@ export default function Filters() {
                         open2.closeDropdown();
                         open3.closeDropdown()
                     }}
-                    className=" bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
+                    className=" bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition"
                 >
                     Categoría
                 </button>
@@ -50,7 +50,7 @@ export default function Filters() {
                         open1.closeDropdown();
                         open3.closeDropdown()
                     }}
-                    className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
+                    className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition"
                 >
                     Area
                 </button>
@@ -75,7 +75,7 @@ export default function Filters() {
                         open1.closeDropdown();
                         open2.closeDropdown();
                     }}
-                    className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
+                    className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition"
                 >
                     Ingredientes
                 </button>
