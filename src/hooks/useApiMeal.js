@@ -3,19 +3,26 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function useApiMeal(endpoint) {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(null)
+    const [error, setError] = useState(null)
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const respuesta = await axios.get(`https://www.themealdb.com/api/json/v1/1/${endpoint}`)
-                console.log(`${endpoint}:`, respuesta.data);
-                setData(respuesta.data);
-            } catch (error) {
-                console.log("Error: no se pueden recuperar los datos", error)
-            }
+        if (!endpoint) {
+            return;
         }
-        fetchData();
+        setLoading(true)
+        axios(`https://www.themealdb.com/api/json/v1/1/${endpoint}`)
+            .then((resp) => {
+                setData(resp.data)
+                console.log(resp.data)
+            })
+            .catch((err) => {
+                setError(err);
+            }).finally(() => {
+                setLoading(false)
+            })
     }, [endpoint]);
 
-    return data;
+    return { data, loading, error }
 }
+

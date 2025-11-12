@@ -30,7 +30,7 @@ export default function Filters() {
                 {/* Dropdown con scroll */}
                 {open1.open && (
                     <div className=" mt-2 bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
-                        {dataCategoria.meals?.map((cat, i) => (
+                        {dataCategoria.data.meals?.map((cat, i) => (
                             <div
                                 key={i}
                                 onClick={open1.closeDropdown}
@@ -56,7 +56,7 @@ export default function Filters() {
                 </button>
                 {open2.open && (
                     <div className=" mt-2 bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
-                        {dataArea.meals?.map((cat, i) => (
+                        {dataArea.data.meals?.map((cat, i) => (
                             <div
                                 key={i}
                                 onClick={open2.closeDropdown}
@@ -81,7 +81,7 @@ export default function Filters() {
                 </button>
                 {open3.open && (
                     <div className=" mt-2 bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
-                        {dataIngrediente.meals?.slice(0, 4).map((cat, i) => (
+                        {dataIngrediente.data.meals?.slice(0, 4).map((cat, i) => (
                             <div
                                 key={i}
                                 onClick={open3.closeDropdown}
