@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import useApiMeal from '../hooks/useApiMeal';
+import mealSelecter from '../components/Cards';
+
 
 
 const LectoRecetas = () => {
+    //const { selectedMeal } = useContext(MealContext)
 
     return(
     <div className='relative flex-flex-col items-cente justify-center'>
