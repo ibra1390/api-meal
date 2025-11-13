@@ -18,7 +18,7 @@ export default function Cards({ endpoint }) {
     const selectMeal = async (mealName) => { // el nuevo llamado a la API con axios
         try {
             const res = await axios.get(`https://www.themealdb.com/api/json/v1/1/${mealSelector}${mealName}`)
-            setSelectedMeal(mealName);
+            setSelectedMeal(res.data.meals[0]);
             console.log("Datos completos de la meal seleccionada:", res.data.meals[0])
             nav("meal/")
         } catch (error) {
@@ -31,7 +31,7 @@ export default function Cards({ endpoint }) {
             {loading && <Loader />}
             {!loading &&
                 <div className="w-82 p-6 grid place-content-center grid-cols-1 sm:w-160 sm:grid-cols-2 lg:w-300 lg:grid-cols-4 gap-4">
-                    {data.meals?.slice(0, 9).map((meal) => (
+                    {data.meals?.map((meal) => (
                         <div key={meal.idMeal} onClick={ // funcion onClick para seleccionar la receta, enviar los datos a LectoRecetas y mostrar al usuario la pagina LectoRecetas 
                             () => selectMeal(meal.strMeal)
                         } className="bg-white rounded-2xl shadow p-4 w-70 cursor-pointer">
