@@ -30,12 +30,12 @@ export default function Cards({ endpoint }) {
         <>
             {loading && <Loader />}
             {!loading &&
-                <div className='flex flex-col items-center justify-center mt-8'>
+                <div className='flex flex-col items-center justify-center mt-2 mb-6'>
                     <div className="w-82 p-6 grid place-content-center grid-cols-1 sm:w-160 sm:grid-cols-2 lg:w-300 lg:grid-cols-4 gap-4">
                         {data.meals?.map((meal) => (
                             <div key={meal.idMeal} onClick={ // funcion onClick para seleccionar la receta, enviar los datos a LectoRecetas y mostrar al usuario la pagina LectoRecetas 
                                 () => selectMeal(meal.strMeal)
-                            } className="bg-white rounded-2xl shadow p-4 w-70 cursor-pointer">
+                            } className="bg-white rounded-2xl shadow p-4 w-70 cursor-pointer font-inter">
                                 <img src={meal.strMealThumb} alt={meal.strMeal} className="rounded-xl mb-2" />
                                 <h2 className="text-lg font-semibold">{meal.strMeal}</h2>
                             </div>

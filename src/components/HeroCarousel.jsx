@@ -31,7 +31,7 @@ export default function HeroCarousel() {
   ]
 
   return (
-    <div className="relative h-100 w-screen overflow-hidden">
+    <div className="relative h-100 w-screen overflow-hidden shadow-lg">
     
       <div className="relative h-full">
         <img
@@ -43,10 +43,10 @@ export default function HeroCarousel() {
         <div className="absolute inset-0 bg-black/40"></div>
         
         <div className="absolute inset-0 flex flex-col justify-center items-start text-white p-6">
-          <h2 className="text-2xl font-bold mb-2">
+          <h2 className="text-2xl font-bold mb-2 font-inter">
             {slides[currentSlide].title}
           </h2>
-          <p className="text-lg">
+          <p className="text-lg font-inter">
             {slides[currentSlide].description}
           </p>
         </div>

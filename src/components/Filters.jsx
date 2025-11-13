@@ -23,9 +23,9 @@ export default function Filters({ setFiltro }) {
                             open2.closeDropdown();
                             open3.closeDropdown();
                         }}
-                        className=" bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition"
+                        className=" bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
                     >
-                        Categoría
+                        Categories
                     </button>
 
                     {/* Dropdown con scroll */}
@@ -56,7 +56,7 @@ export default function Filters({ setFiltro }) {
                             open1.closeDropdown();
                             open3.closeDropdown()
                         }}
-                        className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition"
+                        className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
                     >
                         Area
                     </button>
@@ -85,9 +85,9 @@ export default function Filters({ setFiltro }) {
                             open1.closeDropdown();
                             open2.closeDropdown();
                         }}
-                        className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition"
+                        className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
                     >
-                        Ingredientes
+                        Ingredients
                     </button>
                     {open3.open && (
                         <div className=" mt-2 bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
@@ -110,7 +110,7 @@ export default function Filters({ setFiltro }) {
 
 
             </div>
-            <h2 className='text-2xl font-bold mt-5'>{valor || ""}</h2>
+            <h2 className='text-2xl font-bold mt-5 font-inter'>{valor || ""}</h2>
         </div>
 
 
