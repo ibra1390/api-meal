@@ -18,7 +18,7 @@ export default function Cards({ endpoint }) {
     const selectMeal = async (mealName) => { // el nuevo llamado a la API con axios
         try {
             const res = await axios.get(`https://www.themealdb.com/api/json/v1/1/${mealSelector}${mealName}`)
-            setSelectedMeal(mealName);
+            setSelectedMeal(res.data.meals[0]);
             console.log("Datos completos de la meal seleccionada:", res.data.meals[0])
             nav("meal/")
         } catch (error) {
@@ -52,8 +52,6 @@ export default function Cards({ endpoint }) {
                 </div>
             }
         </>
-
-
 
     )
 }
