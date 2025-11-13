@@ -41,6 +41,14 @@ export default function Cards({ endpoint }) {
                             </div>
                         ))}
                     </div>
+                    {!data.meals || data.meals.length === 0 ? (<div className="flex flex-col items-center justify-center h-64 text-center">
+                        <p className="text-gray-500 text-xl font-semibold">
+                            🍽️ Meals no encontrados
+                        </p>
+                        <p className="text-gray-400 mt-2 text-sm">
+                            Intenta buscar con otro filtro.
+                        </p>
+                    </div>) : ""}
                 </div>
             }
         </>
