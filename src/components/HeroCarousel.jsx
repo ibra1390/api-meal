@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -29,6 +29,14 @@ export default function HeroCarousel() {
       description: "Always the best quality"
     }
   ]
+
+  useEffect(() => {
+    const temporizador = setInterval(() => {
+      setCurrentSlide((actual) => (actual + 1) & slides.length)
+    }, 3000)
+
+    return () => clearInterval(temporizador)
+  }, [slides.length])
 
   return (
     <div className="relative h-100 w-screen overflow-hidden shadow-lg">
