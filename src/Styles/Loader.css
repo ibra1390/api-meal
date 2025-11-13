@@ -1,13 +1,13 @@
 .loader {
-  width: 240px; /* ⬆️ Más grande */
-  height: 240px;
+  width: 240px; 
+  height: 100px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: shake 4s infinite ease-in-out;
   margin: 0 auto;
-  overflow: hidden;
+  
 }
 
 .loader-container {
@@ -15,7 +15,8 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f8f9fa;
+  width: 100vh;
+  background-color: gray-100;
 }
 
 .cup {

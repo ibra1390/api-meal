@@ -15,22 +15,22 @@ export default function Filters({ setFiltro }) {
     const [valor, setValor] = useState("");
     return (
         <div className='flex flex-col items-center justify-center'>
-            <div className="flex flex-row items-center justify-center  mx-auto gap-5 ">
-                <div className=''>
+            <div className="relative flex flex-col sm:flex-row items-center justify-center  mx-auto gap-5 ">
+                <div className='relative'>
                     <button
                         onClick={() => {
                             open1.toggleDropdown();
                             open2.closeDropdown();
                             open3.closeDropdown();
                         }}
-                        className=" bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
+                        className="w-30 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
                     >
                         Categories
                     </button>
 
                     {/* Dropdown con scroll */}
                     {open1.open && (
-                        <div className=" mt-2 bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
+                        <div className=" mt-2 w-full bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
                             {dataCategoria.data.meals?.map((cat, i) => (
                                 <div
                                     key={i}
@@ -49,19 +49,19 @@ export default function Filters({ setFiltro }) {
                     )}
                 </div>
 
-                <div>
+                <div className='relative'>
                     <button
                         onClick={() => {
                             open2.toggleDropdown();
                             open1.closeDropdown();
                             open3.closeDropdown()
                         }}
-                        className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
+                        className="w-30 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
                     >
                         Area
                     </button>
                     {open2.open && (
-                        <div className=" mt-2 bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
+                        <div className=" mt-2 w-full bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
                             {dataArea.data.meals?.map((cat, i) => (
                                 <div
                                     key={i}
@@ -78,7 +78,7 @@ export default function Filters({ setFiltro }) {
                         </div>
                     )}
                 </div>
-                <div>
+                <div className='relative'>
                     <button
                         onClick={() => {
                             open3.toggleDropdown();
@@ -90,7 +90,7 @@ export default function Filters({ setFiltro }) {
                         Ingredients
                     </button>
                     {open3.open && (
-                        <div className=" mt-2 bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
+                        <div className="w-full mt-2 bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
                             {dataIngrediente.data.meals?.slice(0, 4).map((cat, i) => (
                                 <div
                                     key={i}
