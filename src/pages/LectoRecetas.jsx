@@ -8,6 +8,7 @@ import { MealContext } from '../context/MealContext';
 
 const LectoRecetas = () => {
     const { selectedMeal } = useContext(MealContext)
+    
 
     const videoUrl = selectedMeal?.strYoutube;
     const videoId = videoUrl?.split("v=")[1]; // extrae el ID del video
@@ -19,7 +20,7 @@ const LectoRecetas = () => {
         <div style= {{backgroundImage:`url(${selectedMeal.strMealThumb})`}} className=" bg-center bg-cover bg-no-repeat w-screen h-[500px] flex flex-col items-center justify-center 
             relative">
             <div className="absolute inset-0 bg-black/15 flex flex-col items-center justify-center">
-                <h1 className='inset-1 font-extrabold text-5xl text-white text-shadow-lg'>{selectedMeal.strMeal}</h1>
+                <h1 className='inset-1 font-extrabold text-5xl text-white text-shadow-lg text-center'>{selectedMeal.strMeal}</h1>
                 <h2 className='font-bold text-white text-shadow-lg'>{selectedMeal.strCategory}</h2>
             </div>
         </div>
@@ -29,35 +30,34 @@ const LectoRecetas = () => {
                     <h2 className='font-extrabold text-3xl py-5'>INGREDIENTS</h2>
                     <div className='grid grid-cols-2 gap-5 text-white md:grid-cols-3 lg:grid-cols-4'>
                         {Object.entries(selectedMeal).filter(([key, value])=>key.startsWith("strIngredient")&& value).map(([key, value], i)=>(
-                                <div key={i} className=' bg-red-600 flex flex-col items-center justify-center p-3 size-50 rounded-2xl'>
+                                <div key={i} className=' bg-red-800 flex flex-col items-center justify-center w-40 h-50 rounded-2xl shadow-2xl'>
                                     <img src={`https://www.themealdb.com/images/ingredients/${value}-Small.png`} alt={value} className='size-[70%]' />
-                                    <h3 className='font-bold'>{value}</h3>
-                                    <p>{selectedMeal[`strMeasure${i+1}`]|| "al gusto"}</p>
-                                </div>))}                        
+                                    <h3 className='font-bold text-center text-shadow-2xs'>{value}</h3>
+                                    <p className='text-shadow-2xs'>{selectedMeal[`strMeasure${i+1}`]|| "al gusto"}</p>
+                                </div>))}                 
                     </div>
                 </div>
                 <div className='flex flex-col items-center justify-baseline max-w-100'>
                     <h2 className='font-extrabold text-3xl py-5'>PREPARATION</h2>
                     <div>
-                        <p className="whitespace-pre-line leading-normal">{selectedMeal.strInstructions}</p>
+                        <p className="whitespace-pre-line leading-normal w-80 md:w-100">{selectedMeal.strInstructions}</p>
                     </div>
                 </div>
             </div>
         </main>
-        <div className='h-screen w-full bg-black text-white text-center flex '>
             {embedUrl ? (
-            <iframe
-                className="w-full h-full"
-                src={embedUrl}
-                title="Video de receta"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-            ></iframe>
-            ) : (
-                <p className="text-white">Video no disponible</p>
-      )}
-        </div>
+                <div className='h-screen w-full bg-black text-white text-center flex '>
+                <iframe
+                    className="w-full h-full"
+                    src={embedUrl}
+                    title="Video de receta"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+                </div>
+            ) : (null)}
+        
         <Footer />
         {/* <div className='fixed bottom-0 left-0 m-2'>
             <div className='size-10 rounded-full bg-red-600'></div>
