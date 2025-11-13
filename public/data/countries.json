@@ -1,0 +1,150 @@
+[
+  {
+    "area": "American",
+    "flag": "/images/flags/us.png"
+  },
+  {
+    "area": "British",
+    "flag": "/images/flags/gb.png"
+  },
+  {
+    "area": "Canadian",
+    "flag": "/images/flags/ca.png"
+  },
+  {
+    "area": "Chinese",
+    "flag": "/images/flags/cn.png"
+  },
+  {
+    "area": "Croatian",
+    "flag": "/images/flags/hr.png"
+  },
+  {
+    "area": "Dutch",
+    "flag": "/images/flags/nl.png"
+  },
+  {
+    "area": "Egyptian",
+    "flag": "/images/flags/eg.png"
+  },
+  {
+    "area": "French",
+    "flag": "/images/flags/fr.png"
+  },
+  {
+    "area": "Greek",
+    "flag": "/images/flags/gr.png"
+  },
+  {
+    "area": "Indian",
+    "flag": "/images/flags/in.png"
+  },
+  {
+    "area": "Irish",
+    "flag": "/images/flags/ie.png"
+  },
+  {
+    "area": "Italian",
+    "flag": "/images/flags/it.png"
+  },
+  {
+    "area": "Jamaican",
+    "flag": "/images/flags/jm.png"
+  },
+  {
+    "area": "Japanese",
+    "flag": "/images/flags/jp.png"
+  },
+  {
+    "area": "Kenyan",
+    "flag": "/images/flags/kn.png"
+  },
+  {
+    "area": "Malaysian",
+    "flag": "/images/flags/my.png"
+  },
+  {
+    "area": "Mexican",
+    "flag": "/images/flags/mx.png"
+  },
+  {
+    "area": "Moroccan",
+    "flag": "/images/flags/ma.png"
+  },
+  {
+    "area": "Polish",
+    "flag": "/images/flags/pl.png"
+  },
+  {
+    "area": "Portuguese",
+    "flag": "/images/flags/pt.png"
+  },
+  {
+    "area": "Russian",
+    "flag": "/images/flags/ru.png"
+  },
+  {
+    "area": "Spanish",
+    "flag": "/images/flags/es.png"
+  },
+  {
+    "area": "Thai",
+    "flag": "/images/flags/th.png"
+  },
+  {
+    "area": "Tunisian",
+    "flag": "/images/flags/tn.png"
+  },
+  {
+    "area": "Turkish",
+    "flag": "/images/flags/tr.png"
+  },
+  {
+    "area": "Vietnamese",
+    "flag": "/images/flags/vn.png"
+  },
+  {
+    "area": "Argentine",
+    "flag": "/images/flags/ar.png"
+  },
+  {
+    "area": "Slovak",
+    "flag": "/images/flags/sk.png"
+  },
+  {
+    "area": "Norwegian",
+    "flag": "/images/flags/no.png"
+  },
+  {
+    "area": "Saudi Arabian",
+    "flag": "/images/flags/sa.png"
+  },
+  {
+    "area": "Syrian",
+    "flag": "/images/flags/sy.png"
+  },
+  {
+    "area": "Algerian",
+    "flag": "/images/flags/dz.png"
+  },
+  {
+    "area": "Philippine",
+    "flag": "/images/flags/ph.png"
+  },
+  {
+    "area": "Ukrainian",
+    "flag": "/images/flags/ua.png"
+  },
+  {
+    "area": "Uruguayan",
+    "flag": "/images/flags/uy.png"
+  },
+  {
+    "area": "Australian",
+    "flag": "/images/flags/au.png"
+  },
+  {
+    "area": "Venezuelan",
+    "flag": "/images/flags/ve.png"
+  }
+]
