@@ -1,4 +1,3 @@
-// components/HeroCarousel.jsx
 import React, { useState } from 'react'
 
 export default function HeroCarousel() {
@@ -8,19 +7,31 @@ export default function HeroCarousel() {
     {
       id: 1,
       image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200",
-      title: "Deliciosas Recetas",
-      description: "Descubre platillos increíbles"
+      title: "Delicious Recipes",
+      description: "Discover amazing dishes"
     },
     {
       id: 2, 
       image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=1200",
-      title: "Cocina Fácil",
-      description: "Recetas paso a paso"
+      title: "Easy Cooking",
+      description: "Step by step recipes"
+    },
+    {
+      id: 3,
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200",
+      title: "Healthy Food",
+      description: "Nutritious and delicious options"
+    },
+    {
+      id: 4,
+      image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1200",
+      title: "Fresh Ingredients",
+      description: "Always the best quality"
     }
   ]
 
   return (
-    <div className="relative h-100 w-screen overflow-hidden">
+    <div className="relative h-100 w-screen overflow-hidden shadow-lg">
     
       <div className="relative h-full">
         <img
@@ -32,10 +43,10 @@ export default function HeroCarousel() {
         <div className="absolute inset-0 bg-black/40"></div>
         
         <div className="absolute inset-0 flex flex-col justify-center items-start text-white p-6">
-          <h2 className="text-2xl font-bold mb-2">
+          <h2 className="text-2xl font-bold mb-2 font-inter">
             {slides[currentSlide].title}
           </h2>
-          <p className="text-lg">
+          <p className="text-lg font-inter">
             {slides[currentSlide].description}
           </p>
         </div>
