@@ -18,33 +18,6 @@ export default function Header() {
           <h1 className="text-3xl font-bold font-playfair">La Cocinita</h1>
           <p className="text-sm opacity-90 mt-1 hidden sm:block font-inter">Cooking with Passion</p>
         </div>
-        {/* Searchbar */}
-        <div className="w-[25%] flex justify-end">
-          <div className="flex items-center bg-white rounded-full px-2 py-1">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="flex text-gray-800 outline-none text-sm w-24"
-              value=""
-            />
-            <button className='text-red-500 hover:text-red-600 p-1 ml-1'>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="size-5"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
 
       {/* Navigation Bar */}

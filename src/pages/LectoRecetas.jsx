@@ -4,8 +4,6 @@ import mealSelecter from '../components/Cards';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { MealContext } from '../context/MealContext';
-import ReactPlayer from 'react-player';
-
 
 
 const LectoRecetas = () => {
