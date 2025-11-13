@@ -4,7 +4,7 @@ import Cards from "./Cards"
 export default function Search({ setFiltro }) {
     const [valor, setValor] = useState("");
     return (
-        <div className='flex items-center justify-center p-6 mt-8'>
+        <div className='flex items-center justify-center p-6 mt-8 font-inter'>
             <div className='flex items-center'>
                 <input 
                     type="text" 
