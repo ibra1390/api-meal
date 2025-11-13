@@ -23,9 +23,9 @@ export default function Filters({ setFiltro }) {
                             open2.closeDropdown();
                             open3.closeDropdown();
                         }}
-                        className=" bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition"
+                        className=" bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer"
                     >
-                        Categoría
+                        Categories
                     </button>
 
                     {/* Dropdown con scroll */}
@@ -56,7 +56,7 @@ export default function Filters({ setFiltro }) {
                             open1.closeDropdown();
                             open3.closeDropdown()
                         }}
-                        className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition"
+                        className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer"
                     >
                         Area
                     </button>
@@ -85,9 +85,9 @@ export default function Filters({ setFiltro }) {
                             open1.closeDropdown();
                             open2.closeDropdown();
                         }}
-                        className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition"
+                        className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer"
                     >
-                        Ingredientes
+                        Ingredients
                     </button>
                     {open3.open && (
                         <div className=" mt-2 bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">

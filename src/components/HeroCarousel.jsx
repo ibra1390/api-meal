@@ -31,7 +31,7 @@ export default function HeroCarousel() {
   ]
 
   return (
-    <div className="relative h-100 w-screen overflow-hidden">
+    <div className="relative h-100 w-screen overflow-hidden shadow-lg">
     
       <div className="relative h-full">
         <img
