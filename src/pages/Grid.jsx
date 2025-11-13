@@ -8,7 +8,7 @@ export default function Grid() {
     return (
         <div>
             <Search setFiltro={setFiltro}></Search>
-            <Filters></Filters>
+            <Filters setFiltro={setFiltro}></Filters>
             {filtro && <Cards endpoint={filtro}></Cards>}
             {!filtro && <Loader></Loader>}
 
