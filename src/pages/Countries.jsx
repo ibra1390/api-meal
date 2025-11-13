@@ -9,7 +9,7 @@ export default function Countries() {
     const [selectedCountry, setSelectedCountry] = useState(null)
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col">
+        <div className="min-h-screen bg-gray-100 flex flex-col overflow-x-hidden">
             <Header />
             <main className="flex-1 w-full"> 
                 <div className="p-4">
