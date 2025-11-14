@@ -32,7 +32,7 @@ export default function HeroCarousel() {
 
   useEffect(() => {
     const temporizador = setInterval(() => {
-      setCurrentSlide((actual) => (actual + 1) & slides.length)
+      setCurrentSlide((actual) => (actual + 1) % slides.length)
     }, 3000)
 
     return () => clearInterval(temporizador)

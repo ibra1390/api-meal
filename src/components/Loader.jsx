@@ -11,7 +11,7 @@ export default function Loader() {
                     <div className="smoke two" />
                     <div className="smoke three" />
                 </div>
-                <div className="load">Sin Filtrar...</div>
+                <div className="load">Cooking...</div>
             </div>
         </div>
 

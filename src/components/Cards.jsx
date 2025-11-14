@@ -24,7 +24,7 @@ export default function Cards({ endpoint }) {
             const res = await axios.get(`https://www.themealdb.com/api/json/v1/1/${mealSelector}${mealName}`)
             setSelectedMeal(res.data.meals[0]);
             console.log("Datos completos de la meal seleccionada:", res.data.meals[0])
-            nav("meal/")
+            nav("/meal")
         } catch (error) {
             console.log("Error al obtener los datos de la receta:", error)
         }
@@ -37,7 +37,7 @@ export default function Cards({ endpoint }) {
                 <div className='flex flex-col items-center justify-center mt-2 mb-6'>
                     <div className="w-82 p-6 grid place-content-center grid-cols-1 sm:w-160 sm:grid-cols-2 lg:w-300 lg:grid-cols-4 gap-4">
                         {data.meals?.slice(0, visibleMeals).map((meal) => (
-                            <div key={meal.idMeal} onClick={ // funcion onClick para seleccionar la receta, enviar los datos a LectoRecetas y mostrar al usuario la pagina LectoRecetas 
+                            <div key={meal.idMeal} onClick={
                                 () => selectMeal(meal.strMeal)
                             } className="bg-white rounded-2xl shadow p-4 w-70 cursor-pointer font-inter flex flex-col">
                                 <img src={meal.strMealThumb} alt={meal.strMeal} className="rounded-xl mb-2" />

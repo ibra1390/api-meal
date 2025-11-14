@@ -17,10 +17,10 @@ const LectoRecetas = () => {
 
     const videoUrl = selectedMeal?.strYoutube;
     const videoId = videoUrl?.split("v=")[1]; // extrae el ID del video
-    const embedUrl = videoId? `https://www.youtube.com/embed/${videoId}`: null;
+    const embedUrl = videoId? `https://www.youtube.com/embed/${videoId}?autoplay=1`: null;
 
     return(
-    <div className='relative flex-flex-col items-cente justify-center bg-gray-100'>
+    <div className='relative flex-flex-col items-cente justify-center bg-gray-100 overflow-auto'>
         <Header/>
         <div style= {{backgroundImage:`url(${selectedMeal.strMealThumb})`}} className=" bg-center bg-cover bg-no-repeat w-screen h-[500px] flex flex-col items-center justify-center 
             relative">
