@@ -19,7 +19,10 @@ export default function useApiMeal(endpoint) {
             .catch((err) => {
                 setError(err);
             }).finally(() => {
-                setLoading(false)
+                setTimeout(() => {
+                    setLoading(false)
+                }, 1500);
+
             })
     }, [endpoint]);
 
