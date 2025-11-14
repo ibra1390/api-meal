@@ -4,15 +4,15 @@ import HamburguesaMenu from './HamburguesaMenu'
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  
+
   return (
     <header className='w-full bg-red-500 text-white'>
       <div className="flex items-center justify-between py-3 px-4">
         {/* logo */}
         <div className="">
-          <img 
-            src="/images/logo.png" 
-            alt="logo" 
+          <img
+            src="/images/logo.png"
+            alt="logo"
             className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-full border-2 border-white"
           />
         </div>
@@ -36,9 +36,9 @@ export default function Header() {
             <Link to="/" className="text-white px-3 sm:px-4 py-2 rounded-lg transition-all duration-300 font-inter hover:scale-105">
               Home
             </Link>
-            <button className="text-white px-3 sm:px-4 py-2 rounded-lg transition-all duration-300 font-inter hover:scale-105">
+            <Link to="/categories" className="text-white px-3 sm:px-4 py-2 rounded-lg transition-all duration-300 font-inter hover:scale-105">
               Categories
-            </button>
+            </Link>
             <Link to="/countries" className="text-white px-3 sm:px-4 py-2 rounded-lg transition-all duration-300 font-inter hover:scale-105">
               Countries
             </Link>
