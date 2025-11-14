@@ -64,11 +64,6 @@ const LectoRecetas = () => {
             ) : (null)}
         
         <Footer />
-        {/* <div className='fixed bottom-0 left-0 m-2'>
-            <div className='size-10 rounded-full bg-red-600'></div>
-            <div className='size-10 rounded-full bg-red-600'></div>
-            <div className='size-10 rounded-full bg-red-600'></div>
-        </div> */}
     </div>
     )
 }
