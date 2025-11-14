@@ -37,7 +37,7 @@ export default function Filters({ setFiltro }) {
                             open2.closeDropdown();
                             open3.closeDropdown();
                         }}
-                        className="w-30 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
+                        className="w-60 sm:w-35 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
                     >
                         Categories
                     </button>
@@ -70,7 +70,7 @@ export default function Filters({ setFiltro }) {
                             open1.closeDropdown();
                             open3.closeDropdown()
                         }}
-                        className="w-30 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
+                        className="w-60 sm:w-35 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
                     >
                         Area
                     </button>
@@ -99,7 +99,7 @@ export default function Filters({ setFiltro }) {
                             open1.closeDropdown();
                             open2.closeDropdown();
                         }}
-                        className="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
+                        className="w-60 sm:w-35 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-400 transition cursor-pointer font-inter"
                     >
                         Ingredients
                     </button>

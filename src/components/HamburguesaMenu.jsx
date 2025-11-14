@@ -10,9 +10,9 @@ export default function HamburguesaMenu({ open, close }) {
         <Link to="/" onClick={() => close(false)} className="text-white text-center py-2 border-b border-red-400">
           Home
         </Link>
-        <button onClick={() => close(false)} className="text-white text-center py-2 border-b border-red-400">
+        <Link to="/categories" onClick={() => close(false)} className="text-white text-center py-2 border-b border-red-400">
           Categories
-        </button>
+        </Link>
         <Link to="/countries" onClick={() => close(false)} className="text-white text-center py-2 border-b border-red-400">
           Countries
         </Link>
