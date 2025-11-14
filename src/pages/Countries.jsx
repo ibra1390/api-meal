@@ -38,7 +38,12 @@ export default function Countries() {
                         </div>
 
                         {selectedCountry && (
-                            <Cards endpoint={`filter.php?a=${selectedCountry}`} />
+                            <div>
+                                <h2 className='text-2xl font-bold font-inter text-center mb-6'>
+                                    Meals from {selectedCountry}
+                                </h2>
+                                <Cards endpoint={`filter.php?a=${selectedCountry}`} />
+                            </div>
                         )}
                     </div>
                 </div>
