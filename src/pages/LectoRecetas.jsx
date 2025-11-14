@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import useApiMeal from '../hooks/useApiMeal';
 import mealSelecter from '../components/Cards';
 import Header from '../components/Header';
@@ -8,7 +8,12 @@ import { MealContext } from '../context/MealContext';
 
 const LectoRecetas = () => {
     const { selectedMeal } = useContext(MealContext)
-    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        if ("scrollRestoration" in window.history) {
+            window.history.scrollRestoration = "manual";
+        }
+    }, []);
 
     const videoUrl = selectedMeal?.strYoutube;
     const videoId = videoUrl?.split("v=")[1]; // extrae el ID del video
