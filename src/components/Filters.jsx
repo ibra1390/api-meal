@@ -13,8 +13,22 @@ export default function Filters({ setFiltro }) {
     const open2 = useOpen();
     const open3 = useOpen();
     const [valor, setValor] = useState("");
+
+    const isAnyOpen = open1.open || open2.open || open3.open;
+
+
     return (
         <div className='flex flex-col items-center justify-center'>
+            {isAnyOpen && (
+                <div
+                    className="fixed inset-0 z-0"
+                    onClick={() => {
+                        open1.closeDropdown();
+                        open2.closeDropdown();
+                        open3.closeDropdown();
+                    }}
+                ></div>
+            )}
             <div className="relative flex flex-col sm:flex-row items-center justify-center  mx-auto gap-5 ">
                 <div className='relative'>
                     <button
@@ -30,7 +44,7 @@ export default function Filters({ setFiltro }) {
 
                     {/* Dropdown con scroll */}
                     {open1.open && (
-                        <div className=" mt-2 w-full bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
+                        <div className=" mt-2 w-full bg-white border-none rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
                             {dataCategoria.data.meals?.map((cat, i) => (
                                 <div
                                     key={i}
@@ -61,7 +75,7 @@ export default function Filters({ setFiltro }) {
                         Area
                     </button>
                     {open2.open && (
-                        <div className=" mt-2 w-full bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
+                        <div className=" mt-2 w-full bg-white border-none rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
                             {dataArea.data.meals?.map((cat, i) => (
                                 <div
                                     key={i}
@@ -90,7 +104,7 @@ export default function Filters({ setFiltro }) {
                         Ingredients
                     </button>
                     {open3.open && (
-                        <div className="w-full mt-2 bg-white border rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
+                        <div className="w-full mt-2 bg-white border-none rounded-xl shadow-lg max-h-48 overflow-y-auto absolute z-10">
                             {dataIngrediente.data.meals?.slice(0, 4).map((cat, i) => (
                                 <div
                                     key={i}
